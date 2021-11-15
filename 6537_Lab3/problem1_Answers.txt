@@ -1,0 +1,35 @@
+1-
+
+Do you really want to execute 
+"DELETE FROM `DEPERTMENT`
+ WHERE `DEPERTMENT`.`Dnumber` = 1"?
+
+
+  #1451 - Cannot delete or update a parent row: 
+  a foreign key constraint fails 
+  (`lab 3`.`PROJECT`, CONSTRAINT `D_no` FOREIGN KEY (`Dno`) 
+  REFERENCES `DEPERTMENT` (`Dnumber`) ON UPDATE CASCADE)
+
+//////////////////////////////////////////////////////////////////////////////////////////
+2-
+
+
+SQL query: Copy Edit Edit
+
+
+INSERT INTO `PROJECT` 
+(`Pnumber`, `Pname`, `Plocation`, `Dno`) 
+VALUES ('4', 'Fruit Ninja', 'Alexandria', '4')
+MySQL said: Documentation
+
+#1452 - Cannot add or update a child row: a foreign key constraint fails (`lab 3`.`PROJECT`, CONSTRAINT `D_no` 
+FOREIGN KEY (`Dno`) REFERENCES `DEPERTMENT` (`Dnumber`) ON UPDATE CASCADE)
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+3-
+
+Can't insert with not null values while tables are already connected to each other with relations and foreign keys.
+I have to remove connections first so there won't be independent values or tables, insert values of mgr_ssn and Dno then
+add the connections of foreign keys.
+
